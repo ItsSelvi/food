@@ -1,5 +1,4 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -19,8 +18,16 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 0;
   z-index: 100;
+}
+
+.sidebar_top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15%;
 }
 
 .sidebar_top .logo img {
@@ -30,6 +37,10 @@ body {
 .sidebar_bottom {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20%;
   gap: 20px;
 }
 
@@ -37,28 +48,17 @@ body {
   display: block;
 }
 
-.main {
-  margin-left: 120px;
-}
-
 .first_screen {
   width: 100%;
-  min-height: 1000px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   background-image: url('../img/background.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 200px;
-}
-
-.container {
-  width: 100%;
-  max-width: 1760px;
-  margin: 0 auto;
-  padding: 0 40px;
 }
 
 .header {
@@ -72,17 +72,27 @@ body {
   display: flex;
   align-items: center;
   gap: 50px;
-  margin-top: 30px;
-  margin-right: 80px;
+  height: 80px;
+  transform: translateX(-50px);
 }
 
-.nav .menu {
+.hero_container {
+  width: 90%;
+  max-width: 1760px;
+  min-height: 300px;
   display: flex;
-  align-items: center;
-  gap: 50px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.nav_list {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav a {
@@ -94,7 +104,11 @@ body {
 .btn_booking {
   background-color: #B59571;
   color: #FFFFFF;
-  padding: 12px 24px;
+  width: 145px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
@@ -124,19 +138,20 @@ body {
 }
 
 .modal_window {
-  width: 90%;
+  width: 100%;
   max-width: 416px;
   height: 572px;
   background-color: #2b2b2b;
-  padding: 30px 40px;
-  box-sizing: border-box;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 40px;
 }
 
 .modal_close {
+  position: absolute;
   top: 20px;
   right: 20px;
   background: transparent;
@@ -155,54 +170,53 @@ body {
 }
 
 .modal_logo {
-  margin-top: 10px;
-  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal_logo img {
   display: block;
-  width: 80px;
-  height: 46px;
+  width: 90px;
+  height: 52px;
 }
 
 .modal_title {
-  margin-top: 15px;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 30px;
   text-align: center;
 }
 
 .modal_form {
-  width: 100%;
+  width: 336px;
+  max-width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 30px;
 }
 
 .modal_input {
-  width: 100%;
+  width: 296px;
   height: 52px;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 0 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: #ffffff;
-  font-size: 14px;
-  box-sizing: border-box;
+  font-size: 16px;
   outline: none;
+  text-indent: 16px;
 }
 
 .modal_input::placeholder {
-  color: white;
+  color: #ffffff;
 }
 
 .modal_row {
-  width: 100%;
+  width: 296px;
   display: flex;
   justify-content: space-between;
-  gap: 15px;
+  gap: 12px;
 }
 
 .modal_input_small {
@@ -219,19 +233,20 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal_btn:hover {
   opacity: 0.9;
 }
 
-
 .hero_container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  margin-bottom: 0;
 }
 
 .hero_content {
@@ -249,20 +264,23 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 150px;
+  position: relative;
+  top: 150px;
 }
 
 .container {
   max-width: 1076px;
-  margin: 0 auto;
-  padding: 0 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px;
 }
 
 .section_header {
   display: flex;
   align-items: center;
   gap: 30px;
-  margin-bottom: 80px;
 }
 
 .section_subtitle {
@@ -273,64 +291,70 @@ body {
 
 .about_content {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-start;
-  gap: 100px;
+  gap: 150px;
+  width: 100%;
 }
 
 .about_title h2 {
   font-size: 64px;
   font-weight: bold;
   color: #333333;
-  margin-left: 150px;
 }
 
 .about_text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   max-width: 526px;
+  width: 100%;
 }
 
 .about_text p {
   font-size: 18px;
   color: #333333;
-  margin-bottom: 20px;
 }
 
 .menu {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 150px;
+  position: relative;
+  top: 350px;
 }
 
 .menu_content {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-start;
-  gap: 100px;
+  gap: 150px;
+  width: 100%;
 }
 
 .menu_title h2 {
   font-size: 64px;
   font-weight: bold;
   color: #333333;
-  margin-left: 150px;
 }
 
 .menu_text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   max-width: 526px;
+  width: 100%;
 }
 
 .menu_text p {
   font-size: 18px;
   color: #333333;
-  margin-bottom: 20px;
 }
 
 .menu_items {
   display: flex;
   justify-content: center;
   gap: 25px;
-  margin-top: 60px;
   width: 100%;
 }
 
@@ -377,21 +401,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 65px;
   gap: 30px;
+  position: relative;
+  top: 65px;
 }
 
 .menu_card_title_wrap h2 {
   font-size: 16px;
   font-weight: bold;
   color: #333333;
-  margin: 0;
 }
 
 .menu_card_title_wrap .section_line_icon {
   width: 60px;
   height: 3px;
-  gap: 30px;
   object-fit: contain;
 }
 
@@ -399,39 +422,43 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 150px;
+  position: relative;
+  top: 550px;
 }
 
 .delivery_content {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: flex-start;
-  gap: 60px;
+  gap: 150px;
+  width: 100%;
 }
+
 
 .delivery_title h2 {
   font-size: 64px;
   font-weight: bold;
   color: #333333;
   margin-left: 150px;
+  line-height: 1.1;
 }
 
 .delivery_text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   max-width: 526px;
+  width: 100%;
 }
 
 .delivery_text p {
   font-size: 18px;
-  line-height: 1.6;
   color: #333333;
-  margin-bottom: 30px;
-  margin-top: 0;
 }
 
 .delivery_buttons {
   display: flex;
   gap: 20px;
-  opacity: 1;
 }
 
 .form_btn {
@@ -475,7 +502,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 150px;
+  position: relative;
+  top: 650px;
 }
 
 .contacts_content {
@@ -483,7 +511,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 100px;
-  
+  width: 100%;
 }
 
 .contacts_grid {
@@ -491,11 +519,13 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 40px 60px;
   max-width: 416px;
+  width: 100%;
 }
 
 .contact_card {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .contact_time_wrap {
@@ -518,10 +548,7 @@ body {
 
 .contact_desc {
   font-size: 16px;
-  line-height: 1.4;
   color: #333333;
-  margin-top: 10px;
-  margin-bottom: 0;
 }
 
 .contacts_map_wrap {
@@ -544,10 +571,28 @@ body {
   transform: translateY(-50%);
   background-color: #5B5B5B;
   color: #ffffff;
-  padding: 40px;
   width: 416px;
   height: 349px;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts_info_inner {
+  width: 336px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info_address_link,
+.info_phone_link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .contacts_info_box a {
@@ -562,44 +607,28 @@ body {
   text-decoration: underline;
 }
 
-.locate_icon,
-.phone_icon {
+.locate_icon, .phone_icon {
   width: 20px;
   height: 20px;
 }
 
-.info_address_link {
-  margin-bottom: 20px;
-}
-
-.info_address {
+.info_address, .info_phone {
   font-size: 16px;
-  margin: 0;
-}
-
-.info_phone_link {
-  margin-bottom: 30px;
-}
-
-.info_phone {
-  font-size: 16px;
-  margin: 0;
 }
 
 .info_schedule {
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .schedule_title {
   font-size: 20px;
   font-weight: bold;
-  margin-top: 0;
-  margin-bottom: 10px;
 }
 
 .info_schedule .schedule_row {
   font-size: 18px;
-  margin: 0 0 8px 0;
   display: flex;
   gap: 14px;
   align-items: baseline;
@@ -624,7 +653,6 @@ body {
   height: 42px;
   font-size: 16px;
   text-decoration: none !important;
-  box-sizing: border-box;
 }
 
 .btn_active {
@@ -642,16 +670,16 @@ body {
   width: 100%;
   height: 120px;
   background-color: #333333;
-  margin-top: 100px;
   display: flex;
+  justify-content: center;
   align-items: center;
+  position: relative;
+  top: 750px;
 }
 
 .footer_container {
   width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 40px;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -661,8 +689,7 @@ body {
   display: block;
 }
 
-.footer_center .footer_link,
-.footer_right .footer_design {
+.footer_center .footer_link, .footer_right .footer_design {
   color: #ffffff;
   font-size: 16px;
   text-decoration: none;
@@ -672,68 +699,6 @@ body {
 .footer_design {
   font-weight: bold;
 }
-
-.menu_overlay:target {
-  opacity: 1;
-  visibility: visible;
-}
-
-.menu_window {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 40px;
-}
-
-.menu_top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.menu_logo img {
-  width: 60px;
-  height: auto;
-  display: block;
-}
-
-.menu_close {
-  display: block;
-}
-
-.menu_close img {
-  width: 16px;
-  height: auto;
-}
-
-.menu_list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.menu_list a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 24px;
-}
-
-.menu_socials {
-  display: flex;
-  gap: 20px;
-}
-
-.menu_socials img {
-  width: 20px;
-  height: auto;
-  display: block;
-}
-
 
 .menu_overlay {
   position: fixed;
@@ -761,26 +726,46 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 60px;
+  gap: 80px;
 }
 
 .menu_window .btn_booking {
-  width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 237px;
+  height: 74px;
+  font-size: 24px;
 }
 
 .menu_top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .menu_logo img {
   width: 80px;
   height: 46px;
+}
+
+.menu_close img {
+  width: 40px;
+  height: 40px;
+}
+
+
+.menu_list a:hover {
+  text-decoration: none;
+}
+
+.menu_socials {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.menu_socials img {
+  width: 24px;
+  height: 24px;
   display: block;
 }
 
@@ -795,11 +780,12 @@ body {
 
 .menu_list {
   list-style: none;
+  text-decoration: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
 }
 
 .menu_list a {
@@ -819,3 +805,5 @@ body {
   height: 40px;
   display: block;
 }
+
+

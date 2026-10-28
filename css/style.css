@@ -44,10 +44,6 @@ body {
   gap: 20px;
 }
 
-.sidebar_bottom a img {
-  display: block;
-}
-
 .first_screen {
   width: 100%;
   min-height: 100vh;
@@ -166,7 +162,6 @@ body {
 .close_icon {
   width: 40px;
   height: 40px;
-  display: block;
 }
 
 .modal_logo {
@@ -176,7 +171,6 @@ body {
 }
 
 .modal_logo img {
-  display: block;
   width: 90px;
   height: 52px;
 }
@@ -462,7 +456,7 @@ body {
 }
 
 .form_btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -561,7 +555,6 @@ body {
   width: 746px;
   height: 450px;
   object-fit: cover;
-  display: block;
 }
 
 .contacts_info_box {
@@ -586,8 +579,7 @@ body {
   gap: 20px;
 }
 
-.info_address_link,
-.info_phone_link {
+.info_address_link, .info_phone_link {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -685,10 +677,6 @@ body {
   align-items: center;
 }
 
-.footer_logo img {
-  display: block;
-}
-
 .footer_center .footer_link, .footer_right .footer_design {
   color: #ffffff;
   font-size: 16px;
@@ -766,11 +754,6 @@ body {
 .menu_socials img {
   width: 24px;
   height: 24px;
-  display: block;
-}
-
-.menu_close {
-  display: block;
 }
 
 .menu_close img {
@@ -803,7 +786,4 @@ body {
 .menu_socials img {
   width: 40px;
   height: 40px;
-  display: block;
 }
-
-

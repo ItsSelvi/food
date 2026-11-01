@@ -30,10 +30,6 @@ body {
   height: 15%;
 }
 
-.sidebar_top .logo img {
-  display: block;
-}
-
 .sidebar_bottom {
   display: flex;
   flex-direction: column;
@@ -83,12 +79,12 @@ body {
 }
 
 .nav_list {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav a {
@@ -108,6 +104,11 @@ body {
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn_booking:hover {
+  background-color: #C9AB88;
 }
 
 .modal_overlay {
@@ -428,7 +429,6 @@ body {
   width: 100%;
 }
 
-
 .delivery_title h2 {
   font-size: 64px;
   font-weight: bold;
@@ -595,10 +595,6 @@ body {
   gap: 15px;
 }
 
-.contacts_info_box a:hover {
-  text-decoration: underline;
-}
-
 .locate_icon, .phone_icon {
   width: 20px;
   height: 20px;
@@ -645,11 +641,16 @@ body {
   height: 42px;
   font-size: 16px;
   text-decoration: none !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn_active {
   background-color: #B59571;
   color: #ffffff;
+}
+
+.btn_active:hover {
+  background-color: #C9AB88;
 }
 
 .btn_border1 {
@@ -739,7 +740,6 @@ body {
   width: 40px;
   height: 40px;
 }
-
 
 .menu_list a:hover {
   text-decoration: none;
